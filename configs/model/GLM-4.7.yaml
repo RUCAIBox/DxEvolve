@@ -1,0 +1,23 @@
+# @package _global_
+defaults:
+  - _self_
+
+openai_api_key:
+
+model_name: GLM-4.7
+base_models: zai-org/GLM-4.7
+max_context_length: 151329
+exllama: False
+
+system_tag_start: "<｜begin▁of▁sentence｜>"
+system_tag_end: ""
+
+user_tag_start: "<｜User｜>"
+user_tag_end: ""
+
+ai_tag_start: "<｜Assistant｜>"
+ai_tag_end: "<｜end▁of▁sentence｜>"
+
+stop_words:
+ - "<｜end▁of▁sentence｜>"
+ - "<｜User｜>"

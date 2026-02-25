@@ -1,0 +1,8 @@
+# @package _global_
+defaults:
+  - _self_
+
+base_mimic: "hosp/"
+# base_models: ""
+lab_test_mapping_path: "../MIMIC-Clinical-Decision-Making-Dataset/lab_test_mapping.pkl"
+local_logging_dir: "./new_logs"

@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "case_id": "synthetic-biliary-001",
+    "synthetic": true,
+    "source_notice": "Authored solely for software demonstration; not derived from a patient record."
+  },
+  "initial_presentation": "A 59-year-old adult presents with 10 hours of steady right upper-quadrant abdominal pain and nausea. The patient reports no fever and no previous biliary procedure.",
+  "trajectory": [
+    {
+      "action": "Physical Examination",
+      "action_input": "Focused abdominal examination",
+      "uses_evidence_from": [
+        "initial_presentation"
+      ],
+      "observation": "Temperature 37.2 degrees C. Focal right upper-quadrant tenderness is present without rebound or guarding."
+    },
+    {
+      "action": "Laboratory Tests",
+      "action_input": "Complete blood count, liver biochemical tests and lipase",
+      "uses_evidence_from": [
+        "initial_presentation",
+        "step_1"
+      ],
+      "observation": "White blood cell count 11.4 K/uL with 84% neutrophils; total bilirubin 0.7 mg/dL; ALT 32 IU/L; lipase 20 IU/L."
+    },
+    {
+      "action": "Imaging",
+      "action_input": "Right upper-quadrant ultrasound",
+      "uses_evidence_from": [
+        "initial_presentation",
+        "step_1",
+        "step_2"
+      ],
+      "observation": "The gallbladder contains multiple calculi, with 4.2-mm wall thickening and trace pericholecystic fluid. The common bile duct measures 5 mm."
+    },
+    {
+      "action": "Experience Search",
+      "action_input": "Adult with acute right upper-quadrant pain, focal tenderness, mild neutrophilia, normal bilirubin and lipase, and ultrasound showing gallstones with wall thickening and trace pericholecystic fluid",
+      "uses_evidence_from": [
+        "initial_presentation",
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "observation": "Retrieved synthetic experience: when focal right upper-quadrant findings and gallstone-associated inflammatory changes align, normal liver enzymes should be interpreted alongside the patient-specific examination and imaging evidence."
+    }
+  ],
+  "model_output": "Final Diagnosis: Acute calculous cholecystitis",
+  "scoring": {
+    "reference_visibility": "after_model_output",
+    "reference_diagnosis": "cholecystitis",
+    "accepted_diagnoses": [
+      "cholecystitis",
+      "acute cholecystitis",
+      "acute calculous cholecystitis"
+    ]
+  }
+}
