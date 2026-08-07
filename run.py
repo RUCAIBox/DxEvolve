@@ -217,7 +217,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument(
         "--pubmed_api_key",
         type=str,
-        default=None,
+        default=os.getenv("NCBI_API_KEY"),
         help="PubMed/NCBI API key. Defaults to NCBI_API_KEY or PUBMED_API_KEY when unset.",
     )
     p.add_argument("--use_pubmed", type=str2bool, default=True)
